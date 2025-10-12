@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS Promise Tasks A–I</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>JavaScript Promise Tasks</h2>
+
+  <label for="taskSelect">Choose a task:</label>
+  <select id="taskSelect">
+    <option value="taskA">Task A</option>
+    <option value="taskB">Task B</option>
+    <option value="taskC">Task C</option>
+    <option value="taskD">Task D</option>
+    <option value="taskE">Task E</option>
+    <option value="taskF">Task F</option>
+    <option value="taskG">Task G</option>
+    <option value="taskH">Task H</option>
+    <option value="taskI">Task I</option>
+  </select>
+
+  <input type="text" id="userInput" placeholder="Enter value..." />
+  <button onclick="runSelectedTask()">Submit</button>
+  <div id="output"></div>
+
+  <script src="taskA.js"></script>
+  <script src="taskB.js"></script>
+  <script src="taskC.js"></script>
+  <script src="taskD.js"></script>
+  <script src="taskE.js"></script>
+  <script src="taskF.js"></script>
+  <script src="taskG.js"></script>
+  <script src="taskH.js"></script>
+  <script src="taskI.js"></script>
+  <script>
+    function runSelectedTask() {
+      const selected = document.getElementById("taskSelect").value;
+      switch (selected) {
+        case "taskA": runTaskA(); break;
+        case "taskB": runTaskB(); break;
+        case "taskC": runTaskC(); break;
+        case "taskD": runTaskD(); break;
+        case "taskE": runTaskE(); break;
+        case "taskF": runTaskF(); break;
+        case "taskG": runTaskG(); break;
+        case "taskH": runTaskH(); break;
+        case "taskI": runTaskI(); break;
+        default: document.getElementById("output").textContent = "Invalid task.";
+      }
+    }
+  </script>
+</body>
+</html>
